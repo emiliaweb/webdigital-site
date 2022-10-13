@@ -72,6 +72,13 @@
         align-items: center;
         gap: 16px;
     }
+    &-logo {
+        img {
+            @media (max-width: 1023px) {
+                max-width: clamp(118px, 20vw, 200px);
+            }
+        }
+    }
 }
 
 @media (max-width: 1023px) {
