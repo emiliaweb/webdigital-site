@@ -65,8 +65,55 @@ body {
     }
 }
 
-// content wrapper
+// content-container
 
-.content-wrapper {
+.content-container {
     position: relative;
+    padding-left: 100px;
+    max-width: 1140px;
+    margin: 0 auto;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 160px;
+        height: 100%;
+        width: 1px;
+        background-color: var(--clr-neutral-100);
+        opacity: .4;
+    }
+}
+
+// other
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.208em;
+    &--numbered {
+        position: relative;
+        &::before {
+            content: attr(data-title-number);
+            position: absolute;
+            top: 0;
+            left: -101px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.208em;
+            border-left: 3px solid currentColor;
+            padding: 12px 20px;
+        }
+    }
+}
+
+.btn {
+    display: block;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.18em;
+    padding: 0.6818em 0.72em;
+    text-align: center;
+    max-width: max-content;
+    border-radius: 40px;
+    min-width: 11.2em;
 }
