@@ -2,7 +2,18 @@
     position: relative;
     z-index: 100;
     &-top {
-        display: block; //actual styles will be added later
+        padding: 10px 0;
+        &-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: clamp(10px, 3vw, 16px);
+        }
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
     &-bottom {
         --border: 1px solid var(--clr-neutral-100);
