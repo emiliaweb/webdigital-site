@@ -22,4 +22,15 @@
             margin-top: 22px;
         }
     }
+    &-wrap {
+        position: relative;
+    }
+    &-img {
+        position: absolute;
+        z-index: -1;
+        &--100 {
+            top: -40px;
+            right: -50px;
+        }
+    }
 }
