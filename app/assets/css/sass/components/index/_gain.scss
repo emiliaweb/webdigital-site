@@ -31,5 +31,8 @@
                 object-fit: cover;
             }
         }
+        &-text {
+            font-size: clamp(14px,3vw,20px);
+        }
     }
 }
