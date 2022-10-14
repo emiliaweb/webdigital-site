@@ -7,7 +7,7 @@
     }
     &-text {
         font-weight: 300;
-        font-size: 20px;
+        font-size: clamp(14px, 3vw, 20px);
         line-height: 1.2em;
         margin-top: 1.5em;
         &--maxw-100 {
@@ -16,17 +16,22 @@
     }
     &-btn {
         &--first {
-            margin-top: 45px;
+            margin-top: 2em;
         }
         &--second {
-            margin-top: 22px;
+            margin-top: 1em;
         }
     }
     &-wrap {
         position: relative;
     }
     &-img {
-        position: absolute;
+        @media (min-width: 1024px) {
+            position: absolute;
+        }
+        @media (max-width: 1023px) {
+            margin-top: 15px;
+        }
         z-index: -1;
         &--100 {
             top: -40px;
