@@ -158,3 +158,32 @@ body {
     font-size: clamp(14px, 3vw, 20px);
     line-height: 1.2em;
 }
+
+.link {
+    font-weight: 400;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.2em;
+    color: var(--clr-neutral-100);
+    &--pointer {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        max-width: max-content;
+        &::after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg width='36' height='38' viewBox='0 0 36 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35.2678 20.7678C36.2441 19.7915 36.2441 18.2085 35.2678 17.2322L19.3579 1.32233C18.3815 0.346018 16.7986 0.346018 15.8223 1.32233C14.846 2.29864 14.846 3.88155 15.8223 4.85786L29.9645 19L15.8223 33.1421C14.846 34.1184 14.846 35.7014 15.8223 36.6777C16.7986 37.654 18.3816 37.654 19.3579 36.6777L35.2678 20.7678ZM2.9595e-07 21.5L33.5 21.5L33.5 16.5L-2.9595e-07 16.5L2.9595e-07 21.5Z' fill='black'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            --size: 1.63em;
+            width: var(--size);
+            height: calc(var(--size) + 2px);
+            display: block;
+            transition: transform .3s;
+        }
+        &:hover {
+            &::after {
+                transform: translateX(10px);
+            }
+        }
+    }
+}

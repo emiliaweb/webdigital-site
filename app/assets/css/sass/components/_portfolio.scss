@@ -1,0 +1,81 @@
+.portfolio {
+    &-grid {
+        margin-top: clamp(35px, 6vw, 80px);
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-auto-rows: clamp(320px, 40vw, 490px);
+        gap: 16px;
+        @media (min-width: 700px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &-item {
+        position: relative;
+        &-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-wrap {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(18px, 4vw, 45px);
+        }
+        &-title {
+            font-weight: 700;
+            font-size: clamp(24px, 4vw, 36px);
+            line-height: 1.208em;
+        }
+        &-text {
+            margin-top: 1em;
+            font-weight: 400;
+            font-size: clamp(14px, 3vw, 24px);
+            line-height: 1.208em;
+            max-width: 340px;
+        }
+        &-title, &-text {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .5s, transform .8s ease;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0; // .4
+            top: 0;
+            left: 0;
+            transition: opacity .5s;
+            z-index: -1;
+        }
+        &:hover {
+            &::after {
+                opacity: .4;
+            }
+            .portfolio-item-title, .portfolio-item-text {
+                opacity: 1;
+                transform: translateY(0px);
+                visibility: visible;
+            }
+        }
+    }
+    &-link {
+        margin-top: 1.8em;
+        margin-left: auto;
+    }
+}
