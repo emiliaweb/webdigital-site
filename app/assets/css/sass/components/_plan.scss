@@ -8,6 +8,9 @@
             --margin: calc(var(--line-negative) + 15px);
             margin-left: var(--margin);
         }
+        @media (max-width: 819px) {
+            display: none;
+        }
         &-cell {
             font-weight: 300;
             font-size: clamp(14px, 1.5vw, 20px);
