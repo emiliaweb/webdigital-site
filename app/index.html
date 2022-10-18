@@ -9,9 +9,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/reset.min.css">
     <link rel="stylesheet" href="assets/css/index.min.css">
-    <base href="/webdigital-site/app/"> <!--  -->
+    <base href="/"> <!-- /webdigital-site/app/ -->
 </head>
 <body>
     
@@ -495,13 +496,38 @@
 	</section>
 
 	<section class="clients section-padding-100">
-
+		<h2 class="title title--numbered clients-title" data-title-number="06">Наши клиенты</h2>
+		<div class="clients-wrap">
+			<div class="swiper clients-swiper" id="clientsSwiper">
+				<div class="swiper-wrapper clients-swiper-wrapper">
+					<div class="swiper-slide clients-slide">
+						<img src="assets/img/silkway.svg" alt="">
+					</div>
+					<div class="swiper-slide clients-slide">
+						<img src="assets/img/herbalife.svg" alt="">
+					</div>
+					<div class="swiper-slide clients-slide">
+						<img src="assets/img/hrcg.svg" alt="">
+					</div>
+					<div class="swiper-slide clients-slide">
+						<img src="assets/img/ordabasy.svg" alt="">
+					</div>
+					<div class="swiper-slide clients-slide">
+						<img src="assets/img/tulip.svg" alt="">
+					</div>
+					<div class="swiper-slide clients-slide">
+						<img src="assets/img/bekken.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 </div>
 
 </main>
-
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="assets/js/header.js"></script>
+	<script src="assets/js/clients.js"></script>
 </body>
 </html>
