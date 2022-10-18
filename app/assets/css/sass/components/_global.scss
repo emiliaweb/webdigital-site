@@ -39,6 +39,10 @@ body {
 
 // utility bg color classes
 
+.bg-primary-100 {
+    background-color: var(--clr-primary-100);
+}
+
 .bg-neutral-100 {
     background-color: var(--clr-neutral-100);
 }
