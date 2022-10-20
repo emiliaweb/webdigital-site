@@ -64,13 +64,13 @@
             font-weight: 400;
             font-size: clamp(16px, 1.5vw, 18px);
             line-height: 1.2em;
-            max-width: 300px;
+            max-width: clamp(170px, 16vw, 300px);
         }
     }
     &-socials {
         display: flex;
-        gap: 40px;
-        --icon-size: 40px;
+        gap: clamp(15px, 4vw, 40px);
+        --icon-size: clamp(30px, 4vw, 40px);
         a {
             img {
                 width: var(--icon-size);
