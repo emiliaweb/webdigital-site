@@ -1,0 +1,31 @@
+.reviews {
+    &-wrap {
+        margin-top: clamp(40px, 5vw, 70px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        column-gap: clamp(15px, 4vw, 50px);
+        row-gap: clamp(15px, 4vw, 30px);
+    }
+    &-item {
+        max-width: 306px;
+        height: 231px;
+        background-image: url('../img/decorations/review-bubble.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 14px 16px 55px;
+        color: var(--clr-neutral-100);
+        &-title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.208em;
+        }
+        &-text {
+            margin-top: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.208em;
+        }
+    }
+}
