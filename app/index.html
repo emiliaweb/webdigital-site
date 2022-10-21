@@ -9,25 +9,26 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/reset.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="assets/css/index.min.css">
-    <base href="/webdigital-site/app/"> <!--  -->
+    <base href="/"> <!-- /webdigital-site/app/ -->
 </head>
 <body>
     
-    <header class="header">
+    <header class="header" data-aos="fade-down">
         <div class="header-top s-hidden">
 			<div class="container">
 				<div class="header-top-wrap">
-					<a href="tel:+77073334386" class="header-link clr-neutral-100">
+					<a href="https://wa.me/+77073334386" target="_blank" class="header-link clr-neutral-100">
 						+7 707 333 43 86
-						<img src="assets/img/icons/phone-dark-reversed.svg" alt="">
+						<img src="assets/img/icons/whatsapp-dark.svg" alt="">
 					</a>
-					<a href="" class="header-link">
+					<a href="" target="_blank" class="header-link">
 						<img src="assets/img/icons/instagram-dark.svg" alt="">
 					</a>
-					<a href="" class="header-link">
+					<a href="" target="_blank" class="header-link">
 						<img src="assets/img/icons/telegram-dark.svg" alt="">
 					</a>
 				</div>
@@ -50,13 +51,19 @@
 								<a href="#">Главная</a>
 							</div>
 							<div class="header-nav-item" role="listitem">
-								<a href="#">Услуги</a>
+								<a href="#service">Услуги</a>
 							</div>
 							<div class="header-nav-item" role="listitem">
-								<a href="#">Портфолио</a>
+								<a href="#portfolio">Портфолио</a>
 							</div>
 							<div class="header-nav-item" role="listitem">
-								<a href="#">Тарифы</a>
+								<a href="#plan">Тарифы</a>
+							</div>
+							<div class="header-nav-item l-hidden" role="listitem">
+								<a href="tel:+77073334386">8 707 333 43 86</a>
+							</div>
+							<div class="header-nav-item l-hidden" role="listitem">
+								<a href="tel:+77788566601">8 778 856 66 01</a>
 							</div>
 						</nav>
 						<div class="header-socials l-hidden">
@@ -66,16 +73,14 @@
 							<a href="#">
 								<img src="assets/img/icons/telegram.svg" alt="">
 							</a>
-							<a href="#">
-								<img src="assets/img/icons/phone.svg" alt="">
+							<a href="https://wa.me/+77073334386">
+								<img src="assets/img/icons/whatsapp.svg" alt="">
 							</a>
 						</div>
 					</div>
 					<button data-header-open class="header-hamburger l-hidden">
-						<svg width="30" height="10" viewBox="0 0 30 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="30" height="3" fill="#151515"/>
-							<rect y="7" width="30" height="3" fill="#151515"/>
-						</svg>							
+						<span></span>
+						<span></span>					
 					</button>
                 </div>
             </div>
@@ -88,22 +93,22 @@
 	
 	<section class="hero">
 		<div class="hero-wrap">
-			<h1 class="title title--numbered hero-title hero-title--maxw-100" data-title-number="01">Разработка и продвижение сайтов</h1>
-			<div class="hero-text hero-text--maxw-100 clr-neutral-100">Качественные и современные сайты от 100,000тг за короткие сроки для любого бизнеса.</div>
+			<h1 class="title title--numbered hero-title hero-title--maxw-100" data-title-number="01" data-aos="fade-up">Разработка и продвижение сайтов</h1>
+			<div class="hero-text hero-text--maxw-100 clr-neutral-100" data-aos="fade-up" data-aos-delay="100">Качественные и современные сайты от 100,000тг за короткие сроки для любого бизнеса.</div>
 			<div class="hero-img hero-img--100">
 				<img src="assets/img/index-hero-img.png" alt="">
 			</div>
-			<a href="#" class="btn hero-btn hero-btn--first bg-neutral-100 clr-neutral-200">Оставить заявку</a>
-			<a href="#" class="btn hero-btn hero-btn--second bg-neutral-300 clr-neutral-200">Написать Whatsapp</a>
+			<a href="#contact" class="btn hero-btn hero-btn--first bg-neutral-100 clr-neutral-200" data-aos="fade-up" data-aos-delay="200">Оставить заявку</a>
+			<a href="https://wa.me/+77073334386" target="_blank" class="btn hero-btn hero-btn--second bg-neutral-300 clr-neutral-200" data-aos="fade-up" data-aos-delay="300">Написать Whatsapp</a>
 		</div>
 	</section>
 
-	<section class="service section-padding-100">
+	<section class="service section-padding-100" id="service">
 		<div class="service-wrap">
-			<h2 class="title title--numbered service-title" data-title-number="02">Услуги</h2>
+			<h2 class="title title--numbered service-title" data-title-number="02" data-aos="fade-up">Услуги</h2>
 			<div class="service-grid clr-neutral-100">
 
-				<div class="service-item">
+				<div class="service-item" data-aos="fade-right">
 					<div class="service-item-img">
 						<img src="assets/img/mockup-1.jpg" alt="">
 					</div>
@@ -113,7 +118,7 @@
 					</div>
 				</div>
 
-				<div class="service-item">
+				<div class="service-item" data-aos="fade-right" data-aos-delay="100">
 					<div class="service-item-img">
 						<img src="assets/img/mockup-2.jpg" alt="">
 					</div>
@@ -123,7 +128,7 @@
 					</div>
 				</div>
 
-				<div class="service-item">
+				<div class="service-item" data-aos="fade-right" data-aos-delay="200">
 					<div class="service-item-img">
 						<img src="assets/img/mockup-3.jpg" alt="">
 					</div>
@@ -133,7 +138,7 @@
 					</div>
 				</div>
 
-				<div class="service-item">
+				<div class="service-item" data-aos="fade-right" data-aos-delay="300">
 					<div class="service-item-img">
 						<img src="assets/img/mockup-4.jpg" alt="">
 					</div>
@@ -148,58 +153,58 @@
 	</section>
 	
 	<section class="gain section-padding-100">
-		<h2 class="title title--numbered gain-title" data-title-number="03">Услуги веб разработки сайтов</h2>
-		<div class="text-100 gain-text clr-neutral-100">
+		<h2 class="title title--numbered gain-title" data-title-number="03" data-aos="fade-up">Услуги веб разработки сайтов</h2>
+		<div class="text-100 gain-text clr-neutral-100" data-aos="fade-up">
 			<p>Мы поставляем эффективные и привлекательные веб-продукты для ведущих компаний в большинстве отраслей на протяжении многих лет.</p>
 			<p>Предоставляем комплексные услуги веб-разработки с четкими результатами и понятным процессом разработки.</p>
 			<p>Наш оптимизированный процесс разработки и опыт позволяют нам предоставлять первоклассные услуги веб-разработки, отвечающие всем требованиям.</p>
 		</div>
-		<h3 class="title title--mini gain-title--secondary">Обратившись к нам вы получите:</h3>
+		<h3 class="title title--mini gain-title--secondary" data-aos="fade-up">Обратившись к нам вы получите:</h3>
 		<div class="gain-grid">
 
-			<div class="gain-item">
+			<div class="gain-item" data-aos="fade-up" data-aos-delay="100">
 				<div class="gain-item-img">
 					<img src="assets/img/black-bg-cursor.svg" alt="">
 				</div>
 				<div class="text-100 gain-item-text">Тщательно проанализированные требования;</div>
 			</div>
 
-			<div class="gain-item">
+			<div class="gain-item" data-aos="fade-up" data-aos-delay="200">
 				<div class="gain-item-img">
 					<img src="assets/img/black-bg-cursor.svg" alt="">
 				</div>
 				<div class="text-100 gain-item-text">Выдающийся, простой в навигации дизайн пользовательского интерфейса и пользовательского интерфейса;</div>
 			</div>
 
-			<div class="gain-item">
+			<div class="gain-item" data-aos="fade-up" data-aos-delay="300">
 				<div class="gain-item-img">
 					<img src="assets/img/black-bg-cursor.svg" alt="">
 				</div>
 				<div class="text-100 gain-item-text">Безопасное и масштабируемое решение, которое работает быстро;</div>
 			</div>
 
-			<div class="gain-item">
+			<div class="gain-item" data-aos="fade-up" data-aos-delay="400">
 				<div class="gain-item-img">
 					<img src="assets/img/black-bg-cursor.svg" alt="">
 				</div>
 				<div class="text-100 gain-item-text">Адаптивный дизайн;</div>
 			</div>
 
-			<div class="gain-item">
+			<div class="gain-item" data-aos="fade-up" data-aos-delay="500">
 				<div class="gain-item-img">
 					<img src="assets/img/black-bg-cursor.svg" alt="">
 				</div>
 				<div class="text-100 gain-item-text">Пользовательские функции;</div>
 			</div>
 
-			<div class="gain-item">
+			<div class="gain-item" data-aos="fade-up" data-aos-delay="600">
 				<div class="gain-item-img">
 					<img src="assets/img/black-bg-cursor.svg" alt="">
 				</div>
 				<div class="text-100 gain-item-text">Богатые и увлекательные визуальные эффекты;</div>
 			</div>
 
-			<div class="gain-item">
+			<div class="gain-item" data-aos="fade-up" data-aos-delay="700">
 				<div class="gain-item-img">
 					<img src="assets/img/black-bg-cursor.svg" alt="">
 				</div>
@@ -209,10 +214,10 @@
 		</div>
 	</section>
 
-	<section class="portfolio section-padding-100">
-		<h2 class="title title--numbered portfolio-title" data-title-number="04">Портфолио</h2>
+	<section class="portfolio section-padding-100" id="portfolio">
+		<h2 class="title title--numbered portfolio-title" data-title-number="04" data-aos="fade-up">Портфолио</h2>
 		<div class="portfolio-grid">
-			<a href="#" class="portfolio-item">
+			<a href="#" class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
 				<div class="portfolio-item-img">
 					<img src="assets/img/portfolio-1.jpg" alt="">
 				</div>
@@ -222,7 +227,7 @@
 				</div>
 			</a>
 
-			<a href="#" class="portfolio-item">
+			<a href="#" class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
 				<div class="portfolio-item-img">
 					<img src="assets/img/portfolio-2.jpg" alt="">
 				</div>
@@ -232,7 +237,7 @@
 				</div>
 			</a>
 
-			<a href="#" class="portfolio-item">
+			<a href="#" class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
 				<div class="portfolio-item-img">
 					<img src="assets/img/portfolio-3.jpg" alt="">
 				</div>
@@ -242,7 +247,7 @@
 				</div>
 			</a>
 
-			<a href="#" class="portfolio-item">
+			<a href="#" class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
 				<div class="portfolio-item-img">
 					<img src="assets/img/portfolio-4.jpg" alt="">
 				</div>
@@ -252,12 +257,12 @@
 				</div>
 			</a>
 		</div>
-		<a href="#" class="link link--pointer portfolio-link">Посмотреть все работы</a>
+		<a href="#" class="link link--pointer portfolio-link" data-aos="fade-up">Посмотреть все работы</a>
 	</section>
 
-	<section class="plan section-padding-100">
-		<h2 class="title title--numbered plan-title" data-title-number="05">Тарифы</h2>
-		<table class="plan-table">
+	<section class="plan section-padding-100" id="plan">
+		<h2 class="title title--numbered plan-title" data-title-number="05" data-aos="fade-up">Тарифы</h2>
+		<table class="plan-table" data-aos="fade">
 			<thead class="plan-table-head">
 				<tr class="plan-table-row plan-table-row--no-br">
 					<td class="plan-table-cell"></td>
@@ -429,20 +434,20 @@
 				<tr class="plan-table-row plan-table-row--no-bb plan-table-row--no-br">
 					<th class="plan-table-cell plan-table-title"></th>
 					<td class="plan-table-cell">
-						<a href="#" class="btn plan-table-btn bg-neutral-100 clr-neutral-200">Выбрать</a>
+						<a href="#contact" class="btn plan-table-btn bg-neutral-100 clr-neutral-200">Выбрать</a>
 					</td>
 					<td class="plan-table-cell">
-						<a href="#" class="btn plan-table-btn bg-neutral-200 clr-neutral-100">Выбрать</a>
+						<a href="#contact" class="btn plan-table-btn bg-neutral-200 clr-neutral-100">Выбрать</a>
 					</td>
 					<td class="plan-table-cell">
-						<a href="#" class="btn plan-table-btn bg-neutral-100 clr-neutral-200">Выбрать</a>
+						<a href="#contact" class="btn plan-table-btn bg-neutral-100 clr-neutral-200">Выбрать</a>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 
 		<div class="plan-wrap">
-			<div class="plan-card plan-card--border plan-card--border-blue clr-neutral-100">
+			<div class="plan-card plan-card--border plan-card--border-blue clr-neutral-100" data-aos="fade-up" data-aos-delay="50">
 				<div class="plan-card-name">старт от</div>
 				<div class="plan-card-price">150 000</div>
 				<ul class="plan-card-list">
@@ -456,10 +461,10 @@
 					<li class="unavailable">Презентация</li>
 					<li class="unavailable">Дополнительно</li>
 				</ul>
-				<a href="#" class="btn bg-neutral-100 clr-neutral-200 plan-card-btn">Выбрать</a>
+				<a href="#contact" class="btn bg-neutral-100 clr-neutral-200 plan-card-btn">Выбрать</a>
 			</div>
 
-			<div class="plan-card plan-card--no-border plan-card--border bg-primary-100 clr-neutral-200">
+			<div class="plan-card plan-card--no-border plan-card--border bg-primary-100 clr-neutral-200" data-aos="fade-up" data-aos-delay="100">
 				<div class="plan-card-name">корпоративный от</div>
 				<div class="plan-card-price">300 000</div>
 				<ul class="plan-card-list plan-card-list--light">
@@ -473,10 +478,10 @@
 					<li>Презентация ( до 7 страниц)</li>
 					<li>Корпоративная почта</li>
 				</ul>
-				<a href="#" class="btn bg-neutral-200 clr-neutral-100 plan-card-btn">Выбрать</a>
+				<a href="#contact" class="btn bg-neutral-200 clr-neutral-100 plan-card-btn">Выбрать</a>
 			</div>
 
-			<div class="plan-card plan-card--border plan-card--border-blue clr-neutral-100">
+			<div class="plan-card plan-card--border plan-card--border-blue clr-neutral-100" data-aos="fade-up" data-aos-delay="150">
 				<div class="plan-card-name">интернет-магазин от</div>
 				<div class="plan-card-price">450 000</div>
 				<ul class="plan-card-list">
@@ -490,14 +495,14 @@
 					<li>Презентация ( до 10 страниц)</li>
 					<li>Подключение онлайн оплаты</li>
 				</ul>
-				<a href="#" class="btn bg-neutral-100 clr-neutral-200 plan-card-btn">Выбрать</a>
+				<a href="#contact" class="btn bg-neutral-100 clr-neutral-200 plan-card-btn">Выбрать</a>
 			</div>
 		</div>
 	</section>
 
 	<section class="clients section-padding-100">
-		<h2 class="title title--numbered clients-title" data-title-number="06">Наши клиенты</h2>
-		<div class="clients-wrap">
+		<h2 class="title title--numbered clients-title" data-title-number="06" data-aos="fade-up">Наши клиенты</h2>
+		<div class="clients-wrap" data-aos="fade-up">
 			<div class="swiper clients-swiper" id="clientsSwiper">
 				<div class="swiper-wrapper clients-swiper-wrapper">
 					<div class="swiper-slide clients-slide">
@@ -524,11 +529,11 @@
 	</section>
 
 	<section class="team section-padding-100">
-		<h2 class="title title--numbered clients-title" data-title-number="07">Команда</h2>
+		<h2 class="title title--numbered clients-title" data-title-number="07" data-aos="fade-up">Команда</h2>
 
 		<div class="team-wrap">
 
-			<div class="team-item">
+			<div class="team-item" data-aos="fade-right" data-aos-delay="100">
 				<div class="team-item-img">
 					<img src="assets/img/galtsen.jpg" alt="galtsen">
 				</div>
@@ -536,7 +541,7 @@
 				<div class="team-item-subtitle">CEO, специалист по SEO и Google ads</div>
 			</div>
 
-			<div class="team-item">
+			<div class="team-item" data-aos="fade-right" data-aos-delay="200">
 				<div class="team-item-img">
 					<img src="assets/img/kamilla.jpg" alt="galtsen">
 				</div>
@@ -544,7 +549,7 @@
 				<div class="team-item-subtitle">UX&UI Веб дизайнер</div>
 			</div>
 
-			<div class="team-item">
+			<div class="team-item" data-aos="fade-right" data-aos-delay="300">
 				<div class="team-item-img">
 					<img src="assets/img/kate.jpg" alt="galtsen">
 				</div>
@@ -552,7 +557,7 @@
 				<div class="team-item-subtitle">Графический дизайнер</div>
 			</div>
 
-			<div class="team-item">
+			<div class="team-item" data-aos="fade-right" data-aos-delay="400">
 				<div class="team-item-img">
 					<img src="assets/img/darya.jpg" alt="galtsen">
 				</div>
@@ -560,7 +565,7 @@
 				<div class="team-item-subtitle">UX&Ui Веб дизайнер</div>
 			</div>
 
-			<div class="team-item">
+			<div class="team-item" data-aos="fade-right" data-aos-delay="500">
 				<div class="team-item-img">
 					<img src="assets/img/emilia.jpg" alt="galtsen">
 				</div>
@@ -568,7 +573,7 @@
 				<div class="team-item-subtitle">Frontend Разработчик</div>
 			</div>
 
-			<div class="team-item">
+			<div class="team-item" data-aos="fade-right" data-aos-delay="600">
 				<div class="team-item-img">
 					<img src="assets/img/shokan.jpg" alt="galtsen">
 				</div>
@@ -580,21 +585,21 @@
 	</section>
 
 	<section class="reviews section-padding-100">
-		<h2 class="title title--numbered clients-title" data-title-number="08">Отзывы</h2>
+		<h2 class="title title--numbered clients-title" data-title-number="08" data-aos="fade-up">Отзывы</h2>
 
 		<div class="reviews-wrap">
 
-			<div class="reviews-item">
+			<div class="reviews-item" data-aos="fade-right" data-aos-delay="100">
 				<div class="reviews-item-title">Lorem ipsum dolor</div>
 				<div class="reviews-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, mauris id fringilla vehicula, ligula nibh gravida erat, nec suscipit sapien libero vitae dui. Aliquam scelerisque consectetur mauris. Ut a dolor nec velit aliquam tempus et in nisi.</div>
 			</div>
 
-			<div class="reviews-item">
+			<div class="reviews-item" data-aos="fade-right" data-aos-delay="200">
 				<div class="reviews-item-title">Lorem ipsum dolor</div>
 				<div class="reviews-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, mauris id fringilla vehicula, ligula nibh gravida erat, nec suscipit sapien libero vitae dui. Aliquam scelerisque consectetur mauris. Ut a dolor nec velit aliquam tempus et in nisi.</div>
 			</div>
 
-			<div class="reviews-item">
+			<div class="reviews-item" data-aos="fade-right" data-aos-delay="300">
 				<div class="reviews-item-title">Lorem ipsum dolor</div>
 				<div class="reviews-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, mauris id fringilla vehicula, ligula nibh gravida erat, nec suscipit sapien libero vitae dui. Aliquam scelerisque consectetur mauris. Ut a dolor nec velit aliquam tempus et in nisi.</div>
 			</div>
@@ -602,9 +607,9 @@
 		</div>
 	</section>
 
-	<section class="contact section-padding-100">
+	<section class="contact section-padding-100" id="contact">
 
-		<div class="contact-block">
+		<div class="contact-block" data-aos="fade">
 			<div class="contact-col contact-col--left">
 				<h2 class="title contact-title">Оставить заявку</h2>
 				<div class="contact-subtitle">и мы свяжемся с Вами для уточнения деталей</div>
@@ -632,26 +637,26 @@
 
 </main>
 
-	<footer class="footer clr-neutral-200">
+	<footer class="footer clr-neutral-200" data-aos="fade">
 		<div class="footer-top">
 			<div class="container footer-flex">
-				<div class="footer-top-link">Оставить заявку на Zoom конференцию</div>
+				<a href="#" class="footer-top-link" data-aos="fade-up">Оставить заявку на Zoom конференцию</a>
 				<div class="footer-socials">
-					<a href="#"><img src="assets/img/icons/instagram.svg" alt=""></a>
-					<a href="#"><img src="assets/img/icons/instagram.svg" alt=""></a>
-					<a href="#"><img src="assets/img/icons/instagram.svg" alt=""></a>
+					<a href="#" data-aos="fade-up" data-aos-delay="0"><img src="assets/img/icons/instagram.svg" alt=""></a>
+					<a href="#" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/icons/instagram.svg" alt=""></a>
+					<a href="#" data-aos="fade-up" data-aos-delay="200"><img src="assets/img/icons/instagram.svg" alt=""></a>
 				</div>
 			</div>
 		</div>
 		<div class="footer-main">
 			<div class="container footer-flex">
-				<div class="footer-col">
+				<div class="footer-col" data-aos="fade-up" data-aos-delay="100">
 					<a href="#" class="footer-logo">
 						<img src="assets/img/icons/logo-white.svg" alt="">
 					</a>
 					<div class="footer-text footer-text--mt-100">Веб студия по разработке веб дизайна и сайтов  под ключ по всему СНГ и Европе.</div>
 				</div>
-				<div class="footer-col">
+				<div class="footer-col" data-aos="fade-up" data-aos-delay="200">
 					<ul class="footer-list">
 						<li><a href="">Landing Page</a></li>
 						<li><a href="">Копроративный сайт</a></li>
@@ -662,7 +667,7 @@
 						<li><a href="">Разработка Презентаций</a></li>
 					</ul>
 				</div>
-				<div class="footer-col">
+				<div class="footer-col" data-aos="fade-up" data-aos-delay="300">
 					<a href="#" class="footer-contact">+7 707 333 43 86</a>
 					<a href="#" class="footer-contact">+7 778 856 66 01</a>
 					<a href="#" class="footer-contact">info@webdigital.kz</a>
@@ -675,5 +680,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="assets/js/header.js"></script>
 	<script src="assets/js/clients.js"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 </html>
