@@ -9,3 +9,7 @@ function addScript(src, async = false) {
 
 addScript('https://unpkg.com/aos@2.3.1/dist/aos.js');
 addScript('assets/js/aos-init.js');
+
+window.addEventListener('DOMContentLoaded', () => {
+    addScript('assets/js/widget.js');
+})
