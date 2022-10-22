@@ -152,12 +152,25 @@
             text-align: center;
         }
         &-name {
-            font-weight: 500;
-            font-size: 14px;
+            font-weight: 700;
+            font-size: 18px;
         }
         &-price {
             font-weight: 700;
             font-size: 20px;
+            position: relative;
+            max-width: max-content;
+            margin: 0 auto;
+            &:before {
+                content: 'от';
+                // vertical-align: super;
+                font-size: .8em;
+                line-height: 1em;
+                font-weight: 500;
+                margin-right: .2em;
+                position: absolute;
+                left: -20px;
+            }
         }
         &-list {
             font-weight: 300;
