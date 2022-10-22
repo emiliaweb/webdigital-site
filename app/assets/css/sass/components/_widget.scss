@@ -41,6 +41,9 @@
     }
     &-trigger {
         position: relative;
+        img {
+            pointer-events: none;
+        }
         &:before {
             content: '';
             width: 100%;
