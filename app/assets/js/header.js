@@ -15,11 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function updateScrollHeight() {
         document.documentElement.style.scrollPaddingTop = header.scrollHeight + 'px';
+        // console.log(header.scrollHeight);
     }
 
     openMenu();
-
-    updateScrollHeight();
 
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 100 || document.documentElement.scrollTop > 100) {
@@ -27,6 +26,8 @@ window.addEventListener('DOMContentLoaded', () => {
         } else if (window.pageYOffset == 0 || document.documentElement.scrollTop == 0) {
             header.classList.remove('header--scrolled');
         }
-        updateScrollHeight();
+        if (window.innerWidth > 1023) {
+            updateScrollHeight();
+        }
     });
 })
